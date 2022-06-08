@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsla(217, 12%, 63%, 0.1);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --primary: hsl(25, 97%, 53%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 150px;
+}
+
+section {
+    background-color: var(--dark-blue);
+    padding: 30px;
+    border-radius: 20px;
+    width: 30%;
+}
+
+.star-wrapper {
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--white);
+    font-weight: 700;
+}
+
+p {
+    color: var(--medium-grey);
+    font-weight: 700;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+#points {
+    display: flex;
+    justify-content: space-between;
+    color: var(--medium-grey);
+    margin: 30px 0;
+}
+
+.point {
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    padding: 14px 20px;
+    font-size: 700;
+    display: flex;
+    align-items: stretch;
+    color: var(--medium-grey);
+    transition: 0.5s;
+}
+
+.point:hover {
+    background-color: var(--medium-grey);
+    color: var(--white);
+    transition: 0.5s;
+}
+
+.active,
+.active:focus {
+    background-color: var(--primary);
+    color: var(--white);
+    transition: 0.3s;
+}
+
+button {
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+button#mainBtn {
+    width: 100%;
+    background-color: var(--primary);
+	color: var(--white);
+	padding: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+button#mainBtn:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transition: 0.5s;
+}
+
+footer {
+    background-color: var(--dark-blue);
+    color: var(--medium-grey);
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    font-family: inherit;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--primary);
+    transition: 0.5s;
+}
+
+section#thanks {
+    display: none;
+    text-align: center;
+    padding: 40px 30px;
+}
+
+p#response {
+    color: var(--primary);
+    background-color: var(--light-grey);
+    margin: 30px 25%;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 1356px) {
+
+    section#rating {
+        width: 40%;
+    }
+
+    section#thanks {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+
+    body {
+        gap: 100px;
+    }
+
+    section#rating, section#thanks {
+        width: 80%;
+    }
+
+    .point {
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    section#rating, section#thanks {
+        width: 90%;
+    }
+
+    p#response {
+        margin: 30px 10%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    section#rating, section#thanks {
+        width: 20%;
+    }
+
+    p#response {
+        margin: 30px 10%;
+    }
+}
